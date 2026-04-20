@@ -1,0 +1,14 @@
+streamlit
+python-dotenv
+
+# PDF reading
+pypdf
+
+# Hugging Face (choose local or API usage)
+transformers
+accelerate
+torch
+huggingface_hub
+
+# Optional (only if you keep using LangChain patterns)
+langchain
