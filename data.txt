@@ -1,0 +1,77 @@
+The field of materials informatics1,2 suffers from lack of data readiness and
+data accessibility. Although materials data can be systematically generated
+through computational and physical experiments, a substantial amount of
+historical data is trapped in published literature.An ever-growing volume of
+data is continually released in scientific journal articles, but this data frequently
+exists in unstructured natural language text formats, posing challenges
+for immediate utilization by modern informatics that rely on the
+availability of structured datasets. Natural language processing (NLP)
+techniques implemented in materials science seek to automatically extract
+materials insights,materials properties, and synthesis data from a corpus of
+text documents, and propose hypotheses and designs for new materials3–5.
+After acquiring the corpus, a series of complex NLP operations are performed
+which include turning texts into smaller units called tokens,
+recognizing key entities (such as materials, characterization methods, or
+properties) using named entity recognition (NER) methods, creating rulebased
+algorithms to identify relationships between the entities through
+dependency parsing, and finally, extracting information and organizing it
+into a structured format6.
+With the advent of modern machine learning (ML) and artificial
+intelligence techniques, deep learning models including recurrent neural
+networks and long short-termmemory architectures have become valuable
+for NER tasks7,8. In recent years, the transformer-based BERT architecture,
+with its ability to capture contextual and semantic relationships within
+scientific texts9, has especially demonstrated superior performance compared
+to traditional neural networkmodels10.We have previously developed
+and published MaterialsBERT11, a NER model derived from
+PubMedBERT12. This model demonstrated superior performance on publicly
+available datasets in comparison to other BERT models, including
+ChemBERT13 and MatBERT14, particularly for materials science-specific
+data extraction tasks. By employing a MaterialsBERT-based pipeline, we
+successfully extracted over 300,000 polymer-property records from
+approximately 130,000 abstracts, the largest such undertaking at that time,
+with the data made publicly available15. This data extraction approach
+demonstrated the effectiveness of the MaterialsBERTmodel in processing a
+substantial volume of abstracts to obtain polymer-property information.
+The potential for large-scale data extraction usingMaterialsBERT from the
+full texts of journal articles presents a further new opportunity formaterials
+data acquisition.
+While NER models excel in identifying named entities within texts,
+discerning entity relationships across extended passages encompassing multiple sentences solely through recognized named entities continues to be
+a challenge16. This limitation is particularly pronounced in technical and
+scientific documents, where critical information is often expressed in a nonstandard
+and complex manner. In the domain of polymer science, NERbased
+extraction methods encounter additional specific challenges stemming
+from the expansive chemical design space of the materials and the
+utilization of non-standard nomenclature, including commonly used
+names, acronyms, synonyms, and historical terms17.
+Recently, large language models (LLMs) such as Generative Pretrained
+Transformer (GPT), Large Language Model Meta AI (LlaMa), Pathways
+Language Model, etc., have gained significant attention in the field of natural
+language processing18,19. These models have shown remarkable performance
+in handling various NLP tasks, showcasing their robustness and
+versatility20, especially in high-performance text classification, NER, and
+extractive question answering with limited datasets21. A key factor contributing
+to the success of the LLMs is the vast amount of ‘knowledge’ these
+models gain during semi-supervised pre-training (e.g., using masked languagemodeling
+to predict the next token given a set of preceding tokens for
+context)22. In the pre-training phase, LLMs acquire a foundational comprehension
+of language semantics and contextual understanding through
+exposure to training datasets, which typically comprise texts from general
+science and scientific literature23. Subsequently, the pre-trained LLMs, also
+referred to as base models, undergo supervised fine-tuning to produce
+desired text outputs in response to specific prompts or instructions.
+Examples include OpenAI Codex and Code LlaMa, both of which are finetuned
+to generate code snippets based on a given natural language input24.
+Similarly, ChatGPT and LlaMa Chat models are language models finetuned
+to respond to user prompts or instructions conversationally while
+maintaining a history of previous interactions for added context for the
+conversation. A human-like understanding of the language semantics and
+subsequent instruction tuning thus enable the LLMs to perform in-domain
+tasks such as information extraction about a specific material class with no
+(zero-shot) to only a few task-specific examples (few-shots). Such ability
+offers excellent performance and eliminates the efforts needed to create a
+labeled dataset of significant volume and train or fine-tune a new model25.
+Despite the potential formany use cases including data extraction, the
+improved capabilities of the LLMs depend on access to significant computational
+resources. 

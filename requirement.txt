@@ -1,5 +1,6 @@
+#here pip install works( pip insatll -r requirements.txt)
 streamlit
-python-dotenv
+python-dotenv #reads key value from .env file and sets it as an environment variable 
 
 # PDF reading
 pypdf
@@ -10,5 +11,13 @@ accelerate
 torch
 huggingface_hub
 
-# Optional (only if you keep using LangChain patterns)
+# LangChain + HF Inference API (use HuggingFaceEndpoint; avoids InferenceClient.post error)
 langchain
+langchain-community
+langchain-classic
+langchain-huggingface
+
+#to insatll all package
+#to insatll local package in current virtual environemt we an directly insatll setup.py (python setup.py insatlal) file
+#the second way
+-e . 

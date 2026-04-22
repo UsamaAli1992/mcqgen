@@ -1,0 +1,6 @@
+MCQ,Choices,Correct
+What tool was used to fine-tune the LLaMa-2 model?,a: Codex | b: ChatGPT | c: Code LLaMa | d: GPT-3.5,d
+Which of the following tools were used for data extraction?,a: MaterialsBERT | b: LlaMa | c: GPT-3.5 | d: All of the above,d
+How many paragraphs were processed in total?,a: 1000 | b: 233000 | c: 6179 | d: 7169,c
+What metric was used to compare the performance of the models?,a: Accuracy | b: Time | c: Cost | d: Quality,c
+Which of the following statements is true regarding the use of LLMs in data extraction?,a: LLMs cannot be used for data extraction. | b: Using LLMs improves the quality of data extraction. | c: LLMs require a lot of manual effort. | d: LLMs can replace traditional NER models.,b
